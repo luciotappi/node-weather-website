@@ -11,6 +11,9 @@ const forecast = require('./utils/forecast')
 
 const app = express()
 
+const port = process.env.PORT || 3000
+
+
 //define paths for express config
 const publicDirectoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -112,6 +115,9 @@ app.get('*',(req,res)=>{
        })
 })
 
+
+//port 3000 when process.env.PORT doesn't exists (for local test) 
+// port process.env.PORT when it exits ( for Heroke deployed apps ) 
 app.listen(3000, ()=> {
     console.log("App listening on port 3000")
 })
