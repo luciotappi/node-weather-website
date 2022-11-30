@@ -118,6 +118,6 @@ app.get('*',(req,res)=>{
 
 //port 3000 when process.env.PORT doesn't exists (for local test) 
 // port process.env.PORT when it exits ( for Heroke deployed apps ) 
-app.listen(3000, ()=> {
+app.listen(port, ()=> {
     console.log("App listening on port 3000")
 })
